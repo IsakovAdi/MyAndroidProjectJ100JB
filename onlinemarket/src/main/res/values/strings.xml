@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OnlineMarket</string>
+    <string name="back4app_app_id">ZQgxHC9LvSoWquk6fUiUwaE1JEsp6avMC4IneZQB</string>
+    <string name="back4app_client_key">CmsriSzDy1xNtxVVyW5xqL7GdTw86ud6ZnMsQYzA</string>
+    <string name="api_key">JMzMS8bw6c850LWd1APTPArlvU3DiKF3q56uXu2t</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

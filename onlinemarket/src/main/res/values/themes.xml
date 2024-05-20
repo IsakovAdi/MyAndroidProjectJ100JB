@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyAndroidProjectJ100JB" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MyAndroidProjectJ100JB" parent="Base.Theme.MyAndroidProjectJ100JB" />
+
+
+    <style name="TabLayoutStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/BottomNavStyle</item>
+    </style>
+
+
+    <style name="BottomNavStyle">
+        <item name="tabIconTint">@color/bottom_nav_color</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+
+</resources>

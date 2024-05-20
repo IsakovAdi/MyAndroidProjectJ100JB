@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/nestedScrollView"
+            motion:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/toolbar_constraint">
+                <CustomAttribute
+                    motion:attributeName="textSize"
+                    motion:customDimension="20sp" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="80"
+                motion:motionTarget="@+id/toolbar_constraint">
+                <CustomAttribute
+                    motion:attributeName="textSize"
+                    motion:customDimension="16sp" />
+            </KeyAttribute>
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/movieImage" />
+
+        <Constraint
+            android:id="@+id/movieImage"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/poster_image_card_view"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:rotation="0"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            motion:layout_constraintBottom_toBottomOf="@id/movieImage"
+            motion:layout_constraintEnd_toStartOf="@+id/main_guldline"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/movieImage">
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/movieImage" />
+
+        <Constraint
+            android:id="@+id/movieImage"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <PropertySet android:visibility="invisible" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/poster_image_card_view"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:rotation="1440"
+            motion:layout_constraintBottom_toBottomOf="@id/movieImage"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/movieImage">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

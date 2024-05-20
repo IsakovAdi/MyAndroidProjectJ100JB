@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyAndroidProjectJ100JB" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:colorPrimary">@color/black</item>
+    </style>
+
+    <style name="Theme.MyAndroidProjectJ100JB" parent="Base.Theme.MyAndroidProjectJ100JB" />
+
+    <style name="AppTabLayout" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/BottomNavigationStyle</item>
+    </style>
+
+    <style name="BottomNavigationStyle">
+        <item name="tabIconTint">@color/bottom_nav_color</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+
+    <style name="ButtonRightStyle" parent="ButtonLeftStyle">
+        <item name="shapeAppearance">@style/RightShapeAppearance</item>
+        <item name="icon">@drawable/ic_next</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/nice</item>
+    </style>
+
+    <style name="ButtonLeftStyle" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/green</item>
+        <item name="android:textSize">14sp</item>
+        <item name="shapeAppearance">@style/LeftShapeAppearance</item>
+        <item name="icon">@drawable/ic_previous</item>
+        <item name="iconTint">@color/nice</item>
+    </style>
+
+    <style name="LeftShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+    </style>
+
+    <style name="RightShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+    </style>
+
+
+</resources>

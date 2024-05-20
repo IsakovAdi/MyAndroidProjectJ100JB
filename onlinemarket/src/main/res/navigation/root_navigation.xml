@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.onlinemarket.presentation.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_fragment_to_createProductFragment"
+            app:destination="@id/createProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.example.onlinemarket.presentation.fragments.search.SearchProductFragment"
+        android:label="fragment_search_product"
+        tools:layout="@layout/fragment_search_product">
+    </fragment>
+    <fragment
+        android:id="@+id/user_products_fragment"
+        android:name="com.example.onlinemarket.presentation.fragments.user_products.UserProductsFragment"
+        android:label="fragment_user_products"
+        tools:layout="@layout/fragment_user_products">
+    </fragment>
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.onlinemarket.presentation.fragments.profile.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile">
+    </fragment>
+    <fragment
+        android:id="@+id/createProductFragment"
+        android:name="com.example.onlinemarket.presentation.fragments.create_product_fragment.CreateProductFragment"
+        android:label="fragment_create_product"
+        tools:layout="@layout/fragment_create_product" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.onlinemarket.presentation.fragments.details_fragment.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+</navigation>

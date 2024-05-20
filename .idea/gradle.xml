@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/constraintlayoutpractice" />
+            <option value="$PROJECT_DIR$/fragmentsnavigator" />
+            <option value="$PROJECT_DIR$/linearlayoutpractice" />
+            <option value="$PROJECT_DIR$/menuoptions" />
+            <option value="$PROJECT_DIR$/motionlayout" />
+            <option value="$PROJECT_DIR$/movieapp" />
+            <option value="$PROJECT_DIR$/musicshop" />
+            <option value="$PROJECT_DIR$/mvvmtutorial" />
+            <option value="$PROJECT_DIR$/newsproject" />
+            <option value="$PROJECT_DIR$/onlinemarket" />
+            <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/retrofittutorial" />
+            <option value="$PROJECT_DIR$/roomdatabase" />
+            <option value="$PROJECT_DIR$/rvaddandnewitem" />
+            <option value="$PROJECT_DIR$/sharedprefpractice" />
+            <option value="$PROJECT_DIR$/tablayout" />
+            <option value="$PROJECT_DIR$/viewbinding" />
+            <option value="$PROJECT_DIR$/webview" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

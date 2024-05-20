@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/helloFragment">
+
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.example.fragmentsnavigator.fragments.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello">
+        <action
+            android:id="@+id/action_helloFragment_to_chooseLevelFragment"
+            app:destination="@id/chooseLevelFragment"
+            app:popUpTo="@id/helloFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLevelFragment"
+        android:name="com.example.fragmentsnavigator.fragments.ChooseLevelFragment"
+        android:label="fragment_choose_level"
+        tools:layout="@layout/fragment_choose_level">
+        <action
+            android:id="@+id/action_chooseLevelFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/chooseLevelFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.fragmentsnavigator.fragments.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game">
+        <argument
+            android:name="game_settings"
+            app:argType="com.example.fragmentsnavigator.model.GameSettings" />
+        <argument
+            android:name="game_level"
+            app:argType="com.example.fragmentsnavigator.model.Level" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameResultFragment"
+            app:destination="@id/gameResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameResultFragment"
+        android:name="com.example.fragmentsnavigator.fragments.GameResultFragment"
+        android:label="fragment_game_result"
+        tools:layout="@layout/fragment_game_result">
+        <argument
+            android:name="game_result"
+            app:argType="com.example.fragmentsnavigator.model.GameResult" />
+        <argument
+            android:name="game_level"
+            app:argType="com.example.fragmentsnavigator.model.Level" />
+    </fragment>
+
+</navigation>

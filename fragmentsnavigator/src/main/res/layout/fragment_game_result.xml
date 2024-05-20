@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.GameResultFragment">
+
+
+    <ImageView
+        android:id="@+id/gameResultImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_cry"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/correctAnswerCountTv"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Количество правильных ответов:"
+        app:layout_constraintBottom_toTopOf="@+id/countOfAnswerTv"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameResultImage" />
+
+    <TextView
+        android:id="@+id/correctAnswerResult"
+        style="@style/TextResultsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="65"
+        app:layout_constraintBottom_toBottomOf="@+id/correctAnswerCountTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/correctAnswerCountTv" />
+
+    <TextView
+        android:id="@+id/countOfAnswerTv"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Количество ответов:"
+        app:layout_constraintBottom_toTopOf="@+id/correctAnswerPercentTv"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctAnswerCountTv" />
+
+    <TextView
+        android:id="@+id/countOfAnswerResult"
+        style="@style/TextResultsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="54"
+        app:layout_constraintBottom_toBottomOf="@+id/countOfAnswerTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/countOfAnswerTv" />
+
+    <TextView
+        android:id="@+id/correctAnswerPercentTv"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Процент правильных:"
+        app:layout_constraintBottom_toTopOf="@+id/gameLevelTv"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countOfAnswerTv" />
+
+    <TextView
+        android:id="@+id/correctAnswerPercentResult"
+        style="@style/TextResultsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="87"
+        app:layout_constraintBottom_toBottomOf="@+id/correctAnswerPercentTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/correctAnswerPercentTv" />
+
+
+    <TextView
+        android:id="@+id/gameLevelTv"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Сложность игры:"
+        app:layout_constraintBottom_toTopOf="@+id/chooseLevelBtn"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctAnswerPercentTv" />
+
+    <TextView
+        android:id="@+id/gameLevelResult"
+        style="@style/TextResultsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/easy"
+        app:layout_constraintBottom_toBottomOf="@+id/gameLevelTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/gameLevelTv" />
+
+    <Button
+        android:id="@+id/chooseLevelBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Выбрать уровень"
+        app:layout_constraintBottom_toTopOf="@id/restartGame"
+        app:layout_constraintEnd_toEndOf="@id/restartGame"
+        app:layout_constraintStart_toStartOf="@id/restartGame" />
+
+
+    <Button
+        android:id="@+id/restartGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginBottom="40dp"
+        android:text="Начать заново"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

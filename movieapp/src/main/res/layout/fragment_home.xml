@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view"
+    tools:context=".presentation.ui.fragments.home_fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movies_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            app:layout_constraintBottom_toTopOf="@id/previous_btn"
+            app:spanCount="2"
+            tools:listitem="@layout/movie_image_item"
+            android:layout_marginBottom="20dp"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/previous_btn"
+            android:layout_width="wrap_content"
+            android:text="prev"
+            android:visibility="gone"
+            style="@style/ButtonLeftStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/page_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/page_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textStyle="bold|italic"
+            app:layout_constraintTop_toTopOf="@id/previous_btn"
+            app:layout_constraintBottom_toBottomOf="@id/previous_btn"
+            app:layout_constraintStart_toEndOf="@id/previous_btn"
+            app:layout_constraintEnd_toStartOf="@id/next_btn"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:text="next"
+            android:visibility="gone"
+            style="@style/ButtonRightStyle"
+            app:layout_constraintStart_toEndOf="@id/page_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/previous_btn"
+            app:layout_constraintBottom_toBottomOf="@id/previous_btn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

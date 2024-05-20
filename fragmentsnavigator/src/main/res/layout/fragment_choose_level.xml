@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ChooseLevelFragment">
+
+    <TextView
+        android:id="@+id/choose_level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Выберите уровень сложности игры"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/trainee_level_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:text="Trainee"
+        app:layout_constraintBottom_toTopOf="@+id/easy_level_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_level_text"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/easy_level_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#26E60B"
+        android:text="Easy"
+        app:layout_constraintBottom_toTopOf="@+id/standard_level_btn"
+        app:layout_constraintEnd_toEndOf="@id/trainee_level_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/trainee_level_btn"
+        app:layout_constraintTop_toBottomOf="@+id/trainee_level_btn" />
+
+    <Button
+        android:id="@+id/standard_level_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#0439D9"
+        android:text="Standard"
+        app:layout_constraintBottom_toTopOf="@+id/hard_level_btn"
+        app:layout_constraintEnd_toEndOf="@id/trainee_level_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/trainee_level_btn"
+        app:layout_constraintTop_toBottomOf="@+id/easy_level_btn" />
+
+    <Button
+        android:id="@+id/hard_level_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF0000"
+        android:text="Hard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/trainee_level_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/trainee_level_btn"
+        app:layout_constraintTop_toBottomOf="@+id/standard_level_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
